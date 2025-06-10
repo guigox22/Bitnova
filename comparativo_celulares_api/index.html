@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitnova - Comparativo de Celulares</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-text"> <span class="bit">Bit</span><span class="nova">nova</span> </h1>
+                <p class="tagline">Sua fonte confiável de tecnologia</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#comparativo" class="active">Comparativo</a></li>
+                    <li><a href="#lancamentos">Lançamentos</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+        <div class="container">
+            <!-- Título da Página -->
+            <section class="page-header">
+                <h2 class="page-title">Comparativo de Celulares</h2>
+                <p class="page-description">Compare as especificações técnicas dos principais smartphones do mercado e encontre o modelo ideal para você.</p>
+            </section>
+
+            <!-- Ferramenta de Comparação -->
+            <section class="comparison-tool">
+                <div class="comparison-container">
+                    <!-- Seleção de Celulares -->
+                    <div class="phone-selection">
+                        <div class="phone-selector">
+                            <h3>Selecione os celulares para comparar</h3>
+                            <div class="selector-container">
+                                <div class="selector-column">
+                                    <label for="phone1">Celular 1:</label>
+                                    <select id="phone1" class="phone-select">
+                                        <option value="">Selecione um modelo</option>
+                                        <option value="iphone15">iPhone 15 Pro Max</option>
+                                        <option value="s23ultra">Samsung Galaxy S23 Ultra</option>
+                                        <option value="pixel8">Google Pixel 8 Pro</option>
+                                        <option value="mi13">Xiaomi 13 Pro</option>
+                                        <option value="motog200">Motorola Edge 40</option>
+                                    </select>
+                                </div>
+                                <div class="selector-column">
+                                    <label for="phone2">Celular 2:</label>
+                                    <select id="phone2" class="phone-select">
+                                        <option value="">Selecione um modelo</option>
+                                        <option value="iphone15">iPhone 15 Pro Max</option>
+                                        <option value="s23ultra">Samsung Galaxy S23 Ultra</option>
+                                        <option value="pixel8">Google Pixel 8 Pro</option>
+                                        <option value="mi13">Xiaomi 13 Pro</option>
+                                        <option value="motog200">Motorola Edge 40</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button id="compare-btn" class="compare-btn">Comparar</button>
+                        </div>
+                    </div>
+
+                    <!-- Resultado da Comparação -->
+                    <div id="comparison-result" class="comparison-result">
+                        <div class="comparison-header">
+                            <div class="phone-column">
+                                <div id="phone1-name" class="phone-name">Celular 1</div>
+                                <div id="phone1-image" class="phone-image">
+                                    <img src="https://via.placeholder.com/200x400/cccccc/333333?text=Selecione+um+modelo" alt="Selecione um modelo">
+                                </div>
+                            </div>
+                            <div class="phone-column">
+                                <div id="phone2-name" class="phone-name">Celular 2</div>
+                                <div id="phone2-image" class="phone-image">
+                                    <img src="https://via.placeholder.com/200x400/cccccc/333333?text=Selecione+um+modelo" alt="Selecione um modelo">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-table">
+                            <div class="comparison-row header-row">
+                                <div class="spec-name">Especificação</div>
+                                <div class="spec-value">Celular 1</div>
+                                <div class="spec-value">Celular 2</div>
+                            </div>
+                            
+                            <!-- Processador -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Processador</div>
+                                <div id="phone1-processor" class="spec-value">-</div>
+                                <div id="phone2-processor" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Memória RAM -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Memória RAM</div>
+                                <div id="phone1-ram" class="spec-value">-</div>
+                                <div id="phone2-ram" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Armazenamento -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Armazenamento</div>
+                                <div id="phone1-storage" class="spec-value">-</div>
+                                <div id="phone2-storage" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Tela -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Tela</div>
+                                <div id="phone1-display" class="spec-value">-</div>
+                                <div id="phone2-display" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Câmera Traseira -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Câmera Traseira</div>
+                                <div id="phone1-rear-camera" class="spec-value">-</div>
+                                <div id="phone2-rear-camera" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Câmera Frontal -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Câmera Frontal</div>
+                                <div id="phone1-front-camera" class="spec-value">-</div>
+                                <div id="phone2-front-camera" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Bateria -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Bateria</div>
+                                <div id="phone1-battery" class="spec-value">-</div>
+                                <div id="phone2-battery" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Sistema Operacional -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Sistema Operacional</div>
+                                <div id="phone1-os" class="spec-value">-</div>
+                                <div id="phone2-os" class="spec-value">-</div>
+                            </div>
+                            
+                            <!-- Preço -->
+                            <div class="comparison-row">
+                                <div class="spec-name">Preço Médio</div>
+                                <div id="phone1-price" class="spec-value">-</div>
+                                <div id="phone2-price" class="spec-value">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Substituir para AdSense -->
+            <div class="ads-placeholder">
+                Espaço reservado para anúncio 300x250
+            </div>
+
+            <div class="content-wrapper">
+                <!-- Área de Celulares Populares -->
+                <section class="news-section">
+                    <h3 class="section-title">Celulares Mais Comparados</h3>
+                    
+                    <!-- Celular 1 -->
+                    <article class="news-item">
+                        <img src="https://via.placeholder.com/300x200/0099ff/ffffff?text=iPhone+15" alt="iPhone 15" class="news-image">
+                        <div class="news-content">
+                            <span class="category">Apple</span>
+                            <h4 class="news-title">iPhone 15 Pro Max</h4>
+                            <p class="news-excerpt">O mais recente flagship da Apple com chip A17 Pro, câmera de 48MP e tela Super Retina XDR de 6,7 polegadas.</p>
+                            <div class="news-meta">
+                                <span class="author">Lançamento: Setembro 2023</span>
+                                <span class="date">A partir de R$ 9.899</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Celular 2 -->
+                    <article class="news-item">
+                        <img src="https://via.placeholder.com/300x200/00cc66/ffffff?text=Galaxy+S23" alt="Galaxy S23 Ultra" class="news-image">
+                        <div class="news-content">
+                            <span class="category">Samsung</span>
+                            <h4 class="news-title">Galaxy S23 Ultra</h4>
+                            <p class="news-excerpt">Potência máxima com Snapdragon 8 Gen 2, câmera de 200MP e S Pen integrada para máxima produtividade.</p>
+                            <div class="news-meta">
+                                <span class="author">Lançamento: Fevereiro 2023</span>
+                                <span class="date">A partir de R$ 7.499</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Celular 3 -->
+                    <article class="news-item">
+                        <img src="https://via.placeholder.com/300x200/ff6600/ffffff?text=Pixel+8+Pro" alt="Google Pixel 8 Pro" class="news-image">
+                        <div class="news-content">
+                            <span class="category">Google</span>
+                            <h4 class="news-title">Google Pixel 8 Pro</h4>
+                            <p class="news-excerpt">Experiência Android pura com o melhor da fotografia computacional e recursos exclusivos de IA do Google.</p>
+                            <div class="news-meta">
+                                <span class="author">Lançamento: Outubro 2023</span>
+                                <span class="date">A partir de R$ 8.299</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Celular 4 -->
+                    <article class="news-item">
+                        <img src="https://via.placeholder.com/300x200/cc33ff/ffffff?text=Xiaomi+13+Pro" alt="Xiaomi 13 Pro" class="news-image">
+                        <div class="news-content">
+                            <span class="category">Xiaomi</span>
+                            <h4 class="news-title">Xiaomi 13 Pro</h4>
+                            <p class="news-excerpt">Câmeras Leica, processador Snapdragon 8 Gen 2 e carregamento ultrarrápido de 120W em um pacote premium.</p>
+                            <div class="news-meta">
+                                <span class="author">Lançamento: Março 2023</span>
+                                <span class="date">A partir de R$ 6.999</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Filtros de Comparação -->
+                    <div class="widget">
+                        <h3 class="widget-title">Filtros de Comparação</h3>
+                        <form class="filter-form">
+                            <div class="filter-group">
+                                <label for="brand-filter">Marca:</label>
+                                <select id="brand-filter" class="filter-select">
+                                    <option value="all">Todas</option>
+                                    <option value="apple">Apple</option>
+                                    <option value="samsung">Samsung</option>
+                                    <option value="google">Google</option>
+                                    <option value="xiaomi">Xiaomi</option>
+                                    <option value="motorola">Motorola</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="price-filter">Faixa de Preço:</label>
+                                <select id="price-filter" class="filter-select">
+                                    <option value="all">Todos</option>
+                                    <option value="budget">Até R$ 2.000</option>
+                                    <option value="midrange">R$ 2.000 - R$ 5.000</option>
+                                    <option value="premium">R$ 5.000 - R$ 8.000</option>
+                                    <option value="flagship">Acima de R$ 8.000</option>
+                                </select>
+                            </div>
+                            <button type="button" class="filter-btn">Aplicar Filtros</button>
+                        </form>
+                    </div>
+
+                    <div class="ads-placeholder">
+                        Espaço reservado para anúncio 300x250
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Receba as últimas comparações e análises em seu email</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu email" class="email-input">
+                            <button type="submit" class="subscribe-btn">Inscrever</button>
+                        </form>
+                    </div>
+
+                    <!-- Categorias -->
+                    <div class="widget">
+                        <h3 class="widget-title">Categorias</h3>
+                        <ul class="categories">
+                            <li><a href="#smartphones">Smartphones</a></li>
+                            <li><a href="#tablets">Tablets</a></li>
+                            <li><a href="#smartwatches">Smartwatches</a></li>
+                            <li><a href="#fones">Fones de Ouvido</a></li>
+                            <li><a href="#acessorios">Acessórios</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bitnova Tech</h4>
+                    <p>Sua fonte confiável de informação tecnológica desde 2025.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Tiktok</a>
+                        <a href="#" class="social-link">Kway</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Seções</h4>
+                    <ul>
+                        <li><a href="#comparativo">Comparativo</a></li>
+                        <li><a href="#lancamentos">Lançamentos</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#noticias">Notícias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: contato@bitnova.com</p>
+                    <p>Telefone: (11) 94859-8797</p>
+                    <p>São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bitnova. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
